@@ -45,7 +45,8 @@ To keep things simple I have assumed 1 wei = 1 loaned currency instead of using 
 1) First of all a user has to lend money for anyone to borrow it.
 2) A borrower will first deposit collateral and the borrow money which should be less than collateral and liquidity pool amount.
 3) Now the borrower can check how much amount he needs to pay back and he can pay it back lump sum or in installments.
-4) After all the amount is paid the lender cab withdraw his money with added profit 
+4) Borrow has to pay complete loan before borrowing again
+5) lender can withdraw money only when there is ***enough*** money in liquidity pool. 
 
 *Languages and Frameworks used:
 Smart contract is written in solidity.
