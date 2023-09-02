@@ -27,7 +27,7 @@ const Deposite = ({ state,CheckAmount, CheckPool  }) => {
       console.log("Collateral deposited successfully!");
     } catch (err) {
       setLoading(false);
-      alert(err.reason)
+      CheckAmount();
     }
   };
   return (

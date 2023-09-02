@@ -49,7 +49,7 @@ const Repay = ({state}) => {
        <div>
          <button onClick={getAmount}>Show Repay Amount</button>
        </div>
-      <form onSubmit={handleRepay} className='flex flex-col gap-3 p-2 my-3 border bg-black/20'>
+      <form className='flex flex-col gap-3 p-2 my-3 border bg-black/20'>
         <h1 className="text-center">Repay amount</h1>
          <div className='p-2 bg-white/20'>
            Amount to be Repaid: {
@@ -59,7 +59,7 @@ const Repay = ({state}) => {
         <input type="number" placeholder='Enter amount'  onChange={(e) => setAmount(e.target.value)} className='p-2 outline-none bg-amber-50'/>
 <div className='flex justify-between w-full'>
           <button onClick={getAmount} className=' p-2 outline-1 outline text-white hover:bg-green-400 transition-all outline-green-400 min-w-[150px] text-center rounded-sm w-fit'>Show Amount</button>
-          <button type='submit' className=' p-2 outline outline-1 text-white hover:bg-green-400 transition-all outline-green-400 min-w-[150px] text-center rounded-sm w-fit'>
+          <button type='submit' onClick={handleRepay} className=' p-2 outline outline-1 text-white hover:bg-green-400 transition-all outline-green-400 min-w-[150px] text-center rounded-sm w-fit'>
             {loading ? 'Loading...' : 'Repay'}
           </button>
 </div>
