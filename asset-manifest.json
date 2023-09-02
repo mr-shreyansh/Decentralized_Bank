@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Decentralized_Bank/static/css/main.ec7876c4.css",
+    "main.js": "/Decentralized_Bank/static/js/main.edf70efd.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/Decentralized_Bank/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/Decentralized_Bank/index.html",
+    "main.ec7876c4.css.map": "/Decentralized_Bank/static/css/main.ec7876c4.css.map",
+    "main.edf70efd.js.map": "/Decentralized_Bank/static/js/main.edf70efd.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/Decentralized_Bank/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec7876c4.css",
+    "static/js/main.edf70efd.js"
+  ]
+}
