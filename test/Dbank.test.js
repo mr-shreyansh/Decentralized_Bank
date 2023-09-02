@@ -26,6 +26,51 @@ describe("Dbank", function () {
     expect(userAccount.balance).to.equal(depositAmount);
   })
 
+  it("should allow users to borrow money", async function() {
+     
+    // adr1 Lends money
+    const lendAmount1 = 500;
+    await dbank.connect(addr1).lendMoney(lendAmount1);
+
+      // User deposits collateral
+      const depositAmount = 1000;
+      await dbank.connect(owner).deposit({value: depositAmount});
+
+  
+      // User borrows money
+      const borrowAmount = 500;
+      await dbank.connect(owner).borrow(borrowAmount);
+
+      // Check user's balance in the contract
+      const userAccount = await dbank.connect(owner).getAccountDetails();
+  
+      // Check user's loan in the contract
+      expect(userAccount.borrowedAmount).to.equal(borrowAmount);
+  });
+
+  it("should allow users to repay loan", async function() {
+    // adr1 Lends money
+    const lendAmount1 = 500;
+    await dbank.connect(addr1).lendMoney(lendAmount1);
+
+    // User deposits collateral
+    const depositAmount = 1000;
+    await dbank.connect(owner).deposit({value: depositAmount});
+
+    // User borrows money
+    const borrowAmount = 500;
+    await dbank.connect(owner).borrow(borrowAmount);
+
+    // User repays loan
+    await dbank.connect(owner).repayLoan(550);
+
+    // Check user's balance in the contract
+    const userAccount = await dbank.connect(owner).getAccountDetails();
+
+    // Check user's loan in the contract
+    expect(userAccount.borrowedAmount).to.equal(0);
+  });
+
   it("should allow users to lend money", async function() {
 
     // User lends money
