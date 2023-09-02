@@ -76,7 +76,6 @@ function App() {
 
   useEffect(()=>{
     CheckAccount();
-    CheckPool();
     console.log(account)
   },[state])
 
